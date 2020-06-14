@@ -2,8 +2,6 @@ from turtle import Pen, Screen
 from random import randint
 
 
-tela = Screen()
-
 class Coracao:
     def __init__(self):
         self._desenho = Pen()
@@ -11,8 +9,8 @@ class Coracao:
         self._desenho.speed('fastest')
     
     def desenhar_coracao(self, cor:str):
-        x = randint(-700, 700)
-        y = randint(-400, 400)
+        x = randint(-150, 150)
+        y = randint(-250, 250)
         self._desenho.color(cor)
         self._desenho.up()
         self._desenho.goto(x, y)
@@ -38,8 +36,9 @@ class Imagem:
 
 def main():
     try: 
+        tela = Screen()
         tela.title('Casa comigo?')
-        tela.setup(700, 700)
+        tela.setup(500, 600)
         tela.register_shape('img.gif')
 
         imagem = Imagem()
